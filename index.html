@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Editable Resume Builder</h1>
+        <form id="resume-form">
+            <h2>Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" rows="2" placeholder="Enter your address" required></textarea>
+
+            <h2>Objective</h2>
+            <textarea id="objective" rows="3" placeholder="Enter your career objective..." required></textarea>
+
+            <h2>Experience</h2>
+            <textarea id="experience" rows="4" placeholder="Describe your work experience..." required></textarea>
+
+            <h2>Projects</h2>
+            <textarea id="projects" rows="4" placeholder="List your projects..." required></textarea>
+
+            <h2>Certifications</h2>
+            <textarea id="certifications" rows="4" placeholder="List your certifications..." required></textarea>
+
+            <h2>Skills</h2>
+            <input type="text" id="skills" placeholder="Skills (comma-separated)" required>
+
+            <h2>Languages</h2>
+            <input type="text" id="languages" placeholder="Languages (comma-separated)" required>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <div id="resume" class="resume hidden">
+            <h2 id="res-name"></h2>
+            <p id="res-contact"></p>
+            <p id="res-address"></p>
+            <h3>Objective</h3>
+            <p id="res-objective"></p>
+            <h3>Experience</h3>
+            <p id="res-experience"></p>
+            <h3>Projects</h3>
+            <p id="res-projects"></p>
+            <h3>Certifications</h3>
+            <p id="res-certifications"></p>
+            <h3>Skills</h3>
+            <ul id="res-skills"></ul>
+            <h3>Languages</h3>
+            <ul id="res-languages"></ul>
+        </div>
+
+        <button id="edit-button" class="edit-button hidden">Edit Resume</button>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
